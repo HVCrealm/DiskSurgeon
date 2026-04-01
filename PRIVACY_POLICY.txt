@@ -1,0 +1,326 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                         DISKSURGEON — PRIVACY POLICY
+                         Effective Date: April 1, 2025
+                         Last Updated:   April 1, 2025
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Developer:   Dr. Harsh Vardhan Chopra (@hvcrealm)
+Product:     DiskSurgeon V1
+GitHub:      https://github.com/hvcrealm/DiskSurgeon
+Contact:     https://github.com/hvcrealm/DiskSurgeon/issues
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DiskSurgeon is a free, standalone Windows disk cleaning utility. This Privacy
+Policy explains what data the application collects, how it is used, where it
+is sent, and what is explicitly never collected.
+
+DiskSurgeon is designed with a privacy-first architecture. It collects the
+minimum anonymous, non-identifiable data necessary to understand how the
+product is used and to improve it over time.
+
+By using DiskSurgeon, you agree to the practices described in this policy.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. DATA WE COLLECT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DiskSurgeon collects the following anonymous, aggregated data each time the
+application is launched or a scan is performed:
+
+  2.1  DEVICE CONTEXT  (collected once per session, never exact values)
+  ─────────────────────────────────────────────────────────────────────
+  • Anonymous Device ID
+      A SHA-256 cryptographic hash of your Windows MachineGuid registry value.
+      This is a one-way hash — it cannot be reversed to identify your machine,
+      your hardware, or you. It is used solely to count unique devices.
+
+  • Session ID
+      A randomly generated UUID created fresh every time DiskSurgeon opens.
+      It is not stored between sessions and cannot link separate launches.
+
+  • Operating System Version
+      Example: "10.0.22631" — the Windows build number only.
+
+  • Windows Edition
+      Example: "Professional", "Core", "Enterprise". No license key or
+      activation information is collected.
+
+  • OS Architecture
+      Example: "AMD64" or "ARM64".
+
+  • OS Build Number
+      Example: "22631".
+
+  • Python Version
+      The version of Python bundled inside the executable.
+      Example: "3.13.0".
+
+  • Executable Type
+      Whether you are running DiskSurgeon as a compiled .exe or as a raw
+      .py script. Value: true (exe) or false (script).
+
+  2.2  HARDWARE CONTEXT  (coarse-grained buckets only, never exact values)
+  ─────────────────────────────────────────────────────────────────────────
+  • RAM Bucket
+      Your total installed RAM rounded to the nearest standard size.
+      Example: "16 GB". Not your exact RAM amount.
+
+  • Disk Total Size
+      The total size of your C:\ drive rounded to the nearest 10 GB.
+      Example: "500 GB" (actual may be 512 GB). Never the exact byte count.
+
+  • Disk Free Space
+      Free space on C:\ rounded to the nearest 10 GB.
+      Example: "120 GB". Never the exact byte count.
+
+  • Disk Usage Percentage
+      Percentage of C:\ that is used, rounded to the nearest 5%.
+      Example: "75%". Never an exact figure.
+
+  2.3  DISPLAY CONTEXT
+  ─────────────────────
+  • Screen Resolution
+      Example: "1920x1080". Used to inform UI layout decisions.
+
+  • Display Scale
+      Your Windows display scale setting rounded to the nearest 25%.
+      Example: "125%". Never an exact DPI value.
+
+  2.4  LOCALE AND TIME
+  ─────────────────────
+  • System Locale
+      Example: "en_IN" or "en_US". Country-level only, no sub-regional data.
+
+  • Timezone Name
+      Example: "IST" or "UTC". Time offset abbreviation only.
+
+  2.5  PRIVILEGE STATUS
+  ──────────────────────
+  • Administrator Status
+      Whether DiskSurgeon was launched with Administrator privileges.
+      Value: true or false.
+
+  2.6  USAGE EVENTS  (what you do in the app)
+  ─────────────────────────────────────────────
+  The following events are recorded. No filenames, paths, or personal data
+  are included in any event.
+
+  • app_launched
+      Fired once when the app opens.
+      Props: app version, admin status, first_run (true/false).
+
+  • scan_started
+      Fired when any scan begins.
+      Props: which module (junk_cleaner / deep_scan / app_analyzer).
+
+  • scan_completed
+      Fired when a scan finishes.
+      Props: module name, number of items found, total size in MB (rounded),
+             safe-to-delete size in MB (rounded).
+      For app_analyzer: total apps found, number flagged, flagged size in MB.
+
+  • cleanup_completed
+      Fired when files are deleted.
+      Props: module name, megabytes freed (rounded), number of errors.
+
+  • about_opened
+      Fired when the About dialog is opened.
+      No additional props.
+
+  • update_available
+      Fired when a newer version is detected.
+      Props: current version string, latest version string.
+
+  • update_forced
+      Fired when the app is blocked due to a mandatory minimum version.
+      Props: current version, minimum required version, latest version.
+
+  • manual_update_check
+      Fired when the user clicks "Check for Updates" in the About dialog.
+      No additional props.
+
+  • donate_clicked
+      Fired when a donation link is clicked.
+      Props: method (e.g. "github_releases").
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. WHAT WE NEVER COLLECT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The following data is NEVER collected, transmitted, or stored under any
+circumstances:
+
+  ✗  Your name, email address, or any account information
+  ✗  Your Windows username or display name
+  ✗  Your computer name or hostname
+  ✗  Any file names, folder names, or file paths on your system
+  ✗  The contents of any file
+  ✗  The results of any scan (which files were found, which were deleted)
+  ✗  Which applications you have installed (App Analyzer reads this locally;
+     it is never transmitted)
+  ✗  Your IP address (Aptabase explicitly discards this server-side)
+  ✗  Your MAC address or any network hardware identifiers
+  ✗  Your location beyond a coarse locale/timezone code
+  ✗  Any browsing history, clipboard contents, or keystrokes
+  ✗  Screenshots or visual captures of your screen
+  ✗  Any data from your Documents, Downloads, Desktop, or personal folders
+  ✗  Windows license keys, product IDs, or activation status
+  ✗  Passwords, credentials, or any sensitive account data
+  ✗  Any data from applications other than DiskSurgeon itself
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. HOW DATA IS USED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Collected data is used exclusively for the following purposes:
+
+  • Understanding which features are used most and least
+  • Identifying crashes or errors that need to be fixed
+  • Informing UI and compatibility decisions (screen sizes, OS versions)
+  • Measuring the real-world impact of DiskSurgeon (average space freed)
+  • Tracking adoption of new versions after updates are released
+  • Counting unique active users to prioritize development effort
+
+Data is NEVER used for:
+  • Advertising or targeted marketing
+  • Sale to third parties
+  • User profiling or behavioral tracking
+  • Any commercial purpose beyond improving DiskSurgeon itself
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5. ANALYTICS PROVIDER — APTABASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Analytics are powered by Aptabase (https://aptabase.com), a privacy-first
+analytics platform designed specifically for apps and games.
+
+  • Data is stored on Aptabase's European Union servers (Frankfurt, Germany)
+  • Aptabase is GDPR-compliant and does not sell user data
+  • Aptabase explicitly discards IP addresses before storage
+  • Events are batched and sent with a minimum 15-second delay
+  • Aptabase's own privacy policy: https://aptabase.com/legal/privacy
+
+DiskSurgeon uses Aptabase App Key: A-EU-0217889292 (EU region).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6. DATA STORAGE AND RETENTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • DiskSurgeon stores NO data locally on your machine beyond:
+      - A hidden marker file at %LOCALAPPDATA%\DiskSurgeon\.launched
+        This file contains no personal data. It is a zero-byte file used
+        only to detect whether this is the first launch on this machine.
+
+  • Analytics data sent to Aptabase is retained per Aptabase's data
+    retention policy (currently 1 year for free tier).
+
+  • Session IDs are ephemeral — they exist only in memory during a single
+    run of DiskSurgeon and are never written to disk.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  7. AUTOMATIC UPDATE CHECKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DiskSurgeon checks for updates on every launch by making a single HTTPS
+request to the GitHub API:
+
+  GET https://api.github.com/repos/hvcrealm/DiskSurgeon/releases/latest
+
+This request:
+  • Is made by the GitHub API's standard public endpoint (no authentication)
+  • Only retrieves the latest release tag and release notes
+  • Does not send any user data to GitHub beyond what any web request includes
+    (i.e. your IP address is sent to GitHub's servers as part of the HTTP
+    request — this is unavoidable for any network communication and is
+    governed by GitHub's Privacy Policy: https://docs.github.com/en/site-policy/
+    privacy-policies/github-general-privacy-statement)
+  • Times out after 8 seconds and fails silently if unreachable
+  • Does not transmit any device data or analytics to GitHub
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  8. CHILDREN'S PRIVACY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DiskSurgeon does not knowingly collect any data from children under the age
+of 13. The application collects only anonymous, non-identifiable device
+context data as described in Section 2. Since no personal information is
+collected, DiskSurgeon does not require parental consent to use.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  9. YOUR RIGHTS (GDPR / CCPA)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Because DiskSurgeon does not collect personally identifiable information,
+most data subject rights under GDPR and CCPA do not directly apply — there
+is no data that can be linked back to a specific individual.
+
+However, if you have questions or concerns about your data:
+
+  • Right to Know: This policy fully describes all data collected.
+
+  • Right to Delete: The anonymous device ID is derived from a hash. To
+    reset it, you can change your Windows MachineGuid
+    (HKLM\SOFTWARE\Microsoft\Cryptography\MachineGuid). The hash will
+    change and no link to previous sessions will exist.
+
+  • Opt-out: There is currently no in-app analytics opt-out toggle.
+    If you wish to prevent all analytics, block outbound connections
+    to aptabase.com in your firewall. DiskSurgeon will continue to
+    work normally.
+
+  • Contact: Open an issue at
+    https://github.com/hvcrealm/DiskSurgeon/issues
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  10. SECURITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • All analytics data is transmitted over HTTPS (TLS 1.2+)
+  • No analytics data is stored on your local machine
+  • The app does not open any network ports or run any background services
+  • DiskSurgeon makes outbound HTTPS connections only to:
+      - api.github.com       (update checks)
+      - eu.aptabase.com      (anonymous analytics)
+    No other domains are contacted.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  11. CHANGES TO THIS POLICY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This Privacy Policy may be updated when new versions of DiskSurgeon are
+released. Changes will be reflected in the "Last Updated" date at the top
+of this document. The latest version will always be available at:
+
+  https://github.com/hvcrealm/DiskSurgeon
+
+Continued use of DiskSurgeon after a policy update constitutes acceptance
+of the revised policy. If the changes are material, a notice will be
+included in the GitHub release notes.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  12. CONTACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For questions, concerns, or requests regarding this Privacy Policy:
+
+  Developer:  Dr. Harsh Vardhan Chopra
+  GitHub:     https://github.com/hvcrealm
+  Issues:     https://github.com/hvcrealm/DiskSurgeon/issues
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  © 2025 Dr. Harsh Vardhan Chopra. DiskSurgeon V1. Free to use.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
